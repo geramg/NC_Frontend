@@ -1,0 +1,29 @@
+<div class="container mt-5 col-md-8">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Your cart</span>
+    </h4>
+<form (ngSubmit) = "onSubmit()">
+    <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-sm form-inline">
+          <div>
+            <h6 class="my-0">Pepperoni</h6>
+            <small class="text-muted">Pepperoni Pizza</small>
+          </div>
+          <input type="number" min="0" class="form-control" id="pepperoni"
+            [(ngModel)] = "order.pepperoni" name = "pepperoni">
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-sm form-inline">
+          <div>
+            <h6 class="my-0">Cheese</h6>
+            <small class="text-muted">Cheese Pizza</small>
+          </div>
+          <input type="number" min="0" class="form-control" id="cheese"
+            [(ngModel)] = "order.cheese" name = "cheese">
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-sm form-inline">
+            <h6 class="my-0">Total: {{Total}}</h6>
+            <button class="btn btn-success" type="submit">Place Order</button>
+        </li>
+    </ul>
+</form>
+</div>

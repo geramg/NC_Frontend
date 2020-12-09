@@ -1,0 +1,22 @@
+<h2 class = "text-center">Order History</h2>
+<div class="container">
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th> Order Number </th>
+                <th> Order </th>
+                <th> Date </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let order of orders">
+                <td> {{ order.id }}</td>
+                <td> 
+                    Pepperoni: {{ order.pepperoni }}<br>
+                    Cheese: {{ order.cheese }}
+                </td>
+                <td> {{ order.date }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
